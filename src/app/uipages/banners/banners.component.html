@@ -1,0 +1,76 @@
+<!-- <html>
+    <head></head>
+
+    <script src="../../../assets/js/jquery.pogo-slider.min.js" ></script>
+    <body>
+ Start Banner -->
+<!-- <div class="pogoSlider-slide" style="background-image:url(../../../assets/images/banner_img.png);">
+</div>
+<div class="ulockd-home-slider">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="pogoSlider" id="js-main-slider">
+                <div class="pogoSlider-slide" style="background-image:url(../../../assets/images/banner_img.png);">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="slide_text">
+                                    <h3><span span class="theme_color">You only have know one thing</span><br>you can learn anything</h3>
+                                    <h4>Free Educations</h4>
+                                    <br>
+                                    <div class="full center">
+                                        <a class="contact_bt" href="courses.html">Start a Course</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pogoSlider-slide" style="background-image:url(../../../assets/images/banner_img.png);">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="slide_text">
+                                    <h3><span span class="theme_color">You only have know one thing</span><br>you can learn anything</h3>
+                                    <h4>Free Educations</h4>
+                                    <br>
+                                    <div class="full center">
+                                        <a class="contact_bt" href="courses.html">Start a Course</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- .pogoSlider -->
+     <!--    </div>
+    </div>
+</div>
+ End Banner -->
+<!-- </body>
+</html> -->
+
+<!-- <ngb-carousel #carousel (slide)="onSlide($event)">   -->
+  <div >
+    <ngb-carousel #carousel (slide)="onSlide($event)" >
+    <ng-template ngbSlide *ngFor="let img of images; index as i">
+      <div class="carousel-caption">
+        <h3>My slide {{i + 1}} title</h3>
+      </div>
+      <a href="https://www.google.fr/?q=Number+{{i+1}}" target="_blank" rel="nofollow noopener noreferrer">
+        <div class="picsum-img-wrapper">
+          <img [src]="img" alt="My image {{i + 1}} description" style="height:525px; width: 1350px;">
+        </div>
+      </a>
+    </ng-template>
+  </ngb-carousel> 
+</div>
+  <!-- <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="pauseOnHover" [(ngModel)]="pauseOnHover">
+    <label class="form-check-label" for="pauseOnHover">Pause on hover</label>
+  </div> -->
+  <!-- <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="pauseOnFocus" [(ngModel)]="pauseOnFocus">
+    <label class="form-check-label" for="pauseOnFocus">Pause on focus</label>
+  </div> -->

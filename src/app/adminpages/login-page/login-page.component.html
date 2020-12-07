@@ -1,0 +1,98 @@
+<!-- <p>login-page works!</p>
+<div class="section layout_padding contact_section" style="background:#f6f6f6;">
+    <div class="container">
+           <div class="row">            
+             <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="contact_form">
+                    <form >
+                       <fieldset>
+                           <div class="full field">
+                              <input type="text" placeholder="User Name" name="your name" />
+                           </div>
+                           <div class="full field">
+                              <input type="Password" placeholder="Password" name="Password" text="Password"/>
+                           </div>
+                         
+                           <div class="full field">
+                              <div class="center"><button>Send</button></div>
+                           </div>
+                       </fieldset>
+                    </form>
+                </div>
+             </div>
+           </div>			  
+       </div>
+    </div>
+end section -->
+<div id="myModal">
+    <div class="modal-dialog modal-login AdminLogin">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"> Login</h4>
+                <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> -->
+            </div>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <i class="fa fa-user"></i> &nbsp;
+                        <label for="Username">Username</label>
+                       
+                        <input type="text" formControlName="Username" class="form-control" />
+                        <!-- [ngClass]="{ 'is-invalid': submitted && f.username.errors }" 
+        <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+            <div *ngIf="f.username.errors.required">Username is required</div>
+        </div>-->
+                    </div>
+                    <div class="form-group">
+                        <i class="fa fa-lock"></i> &nbsp;
+                        <label for="Password">Password</label>
+                        
+                        <input type="password" formControlName="Password" class="form-control" />
+                        <!-- [ngClass]="{ 'is-invalid': submitted && f.password.errors }" 
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">Password is required</div> 
+        </div>-->
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary">
+                            <!--  <button [disabled]="loading" class="btn btn-primary">
+                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span> -->
+                            Login
+                        </button>
+                        <!-- <a routerLink="/register" class="btn btn-link">Register</a> -->
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal HTML
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog modal-login">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"> Login</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form action="/examples/actions/confirmation.php" method="post">
+                    <div class="form-group">
+                        <i class="fa fa-user"></i>
+                        <input type="text" class="form-control" placeholder="Username" required="required">
+                    </div>
+                    <div class="form-group">
+                        <i class="fa fa-lock"></i>
+                        <input type="password" class="form-control" placeholder="Password" required="required">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-primary btn-block btn-lg" value="Login">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <a href="#">Forgot Password?</a>
+            </div>
+        </div>
+    </div>
+</div> -->

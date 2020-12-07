@@ -1,0 +1,86 @@
+<app-backheader></app-backheader>
+
+
+<section class="section">
+  <section>
+    <div class='col-xl-12'>
+      <h4>Add new Post</h4>
+    </div>
+  </section>
+  <form [formGroup]="FormPost" (ngSubmit)="OnSubmit()" class="form-horizontal">
+    <!-- <div class="form-group"  [ngClass]="{'has-error': f.PostName.errors && (f.PostName.touched || f.PostName.dirty)}"> -->
+
+    <div class="form-group" [ngClass]="{'has-error': f.PostName.errors && (f.PostName.touched || f.PostName.dirty)}">
+     <div class="form-group col-5">
+        <label>Post Name</label>
+        <input type="text" formControlName="PostName" class="form-control" />
+        <div *ngIf=" f.PostName.errors && (f.PostName.touched || f.PostName.dirty)"> PostName is required
+        </div>
+      </div>
+    </div>
+    <div class="form-group" [ngClass]="{'has-error': f.PostTitle.errors && (f.PostTitle.touched || f.PostTitle.dirty)}">
+      <div class="form-group col-5">
+        <label>PostTitle</label>
+        <input type="text" formControlName="PostTitle" class="form-control" />
+        <div *ngIf=" f.PostTitle.errors && (f.PostTitle.touched || f.PostTitle.dirty)"> PostTitle is required
+        </div>
+      </div>
+    </div>
+    <div class="form-group" [ngClass]="{'has-error': f.PostShort.errors && (f.PostShort.touched || f.PostShort.dirty)}">
+      <div class="form-group col-5">
+        <label>PostShort</label>
+        <input type="text" formControlName="PostShort" class="form-control" />
+        <div *ngIf=" f.PostShort.errors && (f.PostShort.touched || f.PostShort.dirty)"> PostShort is required
+        </div>
+      </div>
+    </div>
+    <div class="form-group" [ngClass]="{'has-error': f.PostDesc.errors && (f.PostDesc.touched || f.PostDesc.dirty)}">
+      <div class="form-group col-5">
+        <label>PostDesc</label>
+        <input type="textarea" formControlName="PostDesc" class="form-control" />
+        <div *ngIf=" f.PostDesc.errors && (f.PostDesc.touched || f.PostDesc.dirty)"> PostShort is required
+        </div>
+      </div>
+    </div>
+    <div class="form-group" [ngClass]="{'has-error': f.PostImage.errors && (f.PostImage.touched || f.PostImage.dirty)}">
+      <div class="form-group col-5">
+        <label>PostImage</label>
+        <input type="file" formControlName="PostImage" class="form-control" />
+        <div *ngIf=" f.PostImage.errors && (f.PostImage.touched || f.PostImage.dirty)"> PostShort is required
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group" [ngClass]="{'has-error': f.lastName.errors && (f.lastName.touched || f.lastName.dirty)}">
+      <div class="form-group col-5">
+        <label>Last Name</label>
+        <input type="text" formControlName="lastName" class="form-control" />
+        <div *ngIf=" f.lastName.errors && (f.lastName.touched || f.lastName.dirty)"> Name is required
+        </div>
+      </div>
+    </div>
+
+    <!-- <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+    <span class="help-block"
+    *ngIf="f.lastName.errors && (f.lastName.touched || f.lastName.dirty)">
+    <span *ngIf="f.lastName.errors.required">Name is required</span>
+  </span> -->
+
+    <div class='col-xl-8' style="align-content: center;">
+      <br />
+      <button type="submit" class="btn btn-primary" style="height: 30px; width: 60px;">Save</button>
+    </div>
+  </form>
+  <!-- //https://www.c-sharpcorner.com/article/how-to-work-with-text-editor-in-angular-8-application/ -->
+  <div>
+    touched : {{FormPost.touched}} <br />
+    touched : {{FormPost.controls.PostName.touched}} <br />
+    dirty : {{FormPost.dirty}}
+  </div>
+  <br />
+  <div>
+    touched : {{FormPost.get('PostName').touched}} <br /> touched : {{f.PostName.errors}} <br />
+    dirty : {{FormPost.get('PostName').dirty}} <br />
+    value : {{FormPost.get('PostName').value}} <br />
+  </div>
+</section>

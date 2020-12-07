@@ -1,0 +1,11 @@
+@import "../../../assets/css/pogo-slider.min.css";
+@import "../../../assets/css/responsive.css";
+@import "../../../assets/css/responsiveslides.css";
+@import "../../../assets/css/bootstrap.min.css";
+@import  "../../../styles.css";
+
+ .carousel-inner
+ {
+    height: 400px;
+   
+ }
